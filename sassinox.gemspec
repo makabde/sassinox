@@ -8,10 +8,12 @@ Gem::Specification.new do |spec|
   spec.version       = Sassinox::VERSION
   spec.authors       = ["makabde"]
   spec.email         = ["makram.abde@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
   spec.license       = "MIT"
+  spec.homepage      = "https://github.com/makabde/sassinox"
+  spec.summary       = "Swiss Army Knife Mixins library using SCSS syntax"
+  spec.description   = <<-DESC
+  Sassinox is a sass powered library of extends, functions and mixins...
+  DESC
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
