@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+# Codekit needs relative paths
+require File.dirname(__FILE__) + '/../lib/sassinox.rb'
+
+Sassinox::Generator.start
