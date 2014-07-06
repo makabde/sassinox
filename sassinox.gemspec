@@ -1,6 +1,4 @@
 # coding: utf-8
-# lib = File.expand_path('../lib', __FILE__)
-# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 $:.push File.expand_path("../lib", __FILE__)
 require 'sassinox/version'
 
@@ -9,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.version       = Sassinox::VERSION
   spec.platform      = Gem::Platform::RUBY
   spec.authors       = ["makabde"]
-  spec.email         = ["makram.abde@gmail.com"]
-  spec.homepage      = ""
+  spec.email         = ["hello@makabde.me"]
+  spec.homepage      = "http://sassinox.io"
   spec.license       = "MIT"
-  spec.summary       = ""
+  spec.summary       = "Swiss Army Knife Mixins library using SCSS syntax"
   spec.description   = ""
 
   spec.files         = `git ls-files`.split("\n")

@@ -1,0 +1,10 @@
+// Reset box model
+//
+// Accepts: border-box (default) | content-box | inherit
+@mixin reset-box-model ($type: border-box) {
+  *,
+  *:before,
+  *:after {
+    box-sizing: $type;
+  }
+}
