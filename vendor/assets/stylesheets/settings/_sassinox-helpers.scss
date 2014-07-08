@@ -1,0 +1,6 @@
+// STRIP-UNIT
+// Strip unit from value and return it without its unit of measure.
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}

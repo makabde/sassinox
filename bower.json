@@ -1,20 +1,25 @@
 {
-  "name": "sassinox",
-  "homepage": "http://sassinox.io",
-  "authors": "Makram Abdennabi",
-  "description": "Swiss Army Knife Mixins library using SCSS syntax",
+  "name": "wrapper",
   "version": "0.0.1",
+  "authors": [
+    "makabde <hello@makabde.me>"
+  ],
   "main": "dist/_sassinox.scss",
+  "license": "MIT",
+  "description": "Swiss Army Knife Mixins library using SCSS syntax",
+  "homepage": "http://sassinox.io",
+  "private": true,
   "ignore": [
-    "bin",
-    "features",
-    "lib",
-    "vendor",
-    ".editorconfig"
-    ".gitignore",
+    "**/.*",
     "Gemfile",
     "Gemfile.lock",
+    "LICENSE.txt",
     "Rakefile",
-    "sassinox.gemspec"
+    "README.txt",
+    "wrapper.gemspec",
+    "bin",
+    "lib",
+    "features",
+    "vendor"
   ]
 }

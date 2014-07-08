@@ -1,0 +1,6 @@
+// Is Even
+// Checks if a number is even
+
+@function is-even($int) {
+  @return $int % 2 == 0;
+}

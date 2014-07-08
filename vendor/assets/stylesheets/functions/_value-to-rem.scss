@@ -1,0 +1,33 @@
+// REM
+// Converts 1 or n values to rem and return its in rem
+// Calculate with 1,2,3 or 4 parameters. Unit of measure is not required but
+// supported.
+//
+//    calc-to-rem(10 20 30 40px)
+//
+// Values must be spaced but if you need to use comas, wrap the values in another pair of parentheses.
+//
+//    calc-to-rem((10, 20, 30, 40px))
+//
+// Optionnaly calc with a different base (eg: 24px) to calculate rem
+//
+//    calc-to-rem(12 24 32 48px, 24px)
+//
+// If you require to comma separate your list
+//
+//    calc-to-rem((12, 24, 32, 48px), 24px)
+//
+
+
+/* Private */
+
+@function rem($values, $base-value: $base-rem) {
+  $max: length($values);
+
+  @if $max == 1 {
+    $result: strip-unit($values) / strip-unit($base-value) * 1rem;
+    @if ($result == 0rem) { $result: 0 }
+
+    @return $result;
+  }
+}

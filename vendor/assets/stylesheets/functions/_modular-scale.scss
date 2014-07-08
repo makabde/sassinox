@@ -1,6 +1,6 @@
 @function modular-scale($value, $increment, $ratio) {
   $v1: nth($value, 1);
-  $v2: nth($valuem length(#value));
+  $v2: nth($value, length($value));
   $value: $v1;
 
   // Scale $v2 to just above $v1

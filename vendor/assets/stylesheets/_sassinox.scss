@@ -8,7 +8,14 @@
 
 // Settings
 @import
-  'settings/sassinox-settings';
+  'settings/sassinox-settings',
+  'settings/sassinox-helpers';
+
+// Functions
+@import
+  'functions/golden-ratio',
+  'functions/modular-scale',
+  'functions/value-to-rem';
 
 // Extends
 @import
@@ -16,6 +23,7 @@
 
 //  Mixins
 @import
+  'mixins/flex-box.scss',
   'mixins/hide-text',
   'mixins/register-font',
   'mixins/reset-box-model';
