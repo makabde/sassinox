@@ -12,22 +12,23 @@
 // Optionnaly calc with a different base (eg: 24px) to calculate rem
 //
 //    calc-to-rem(12 24 32 48px, 24px)
-//
+// 
 // If you require to comma separate your list
 //
 //    calc-to-rem((12, 24, 32, 48px), 24px)
 //
 
-
-/* Private */
-
 @function rem($values, $base-value: $base-rem) {
   $max: length($values);
 
   @if $max == 1 {
-    $result: strip-unit($values) / strip-unit($base-value) * 1rem;
-    @if ($result == 0rem) { $result: 0 }
-
-    @return $result;
+    @return rem-calc($values, $base-value);
   }
+
+  $results: ();
+  @for $i from 1 through $max {
+    $results: append($results, rem-calc(nth($values, $i), $base-value));
+  }
+
+  @return $results;
 }

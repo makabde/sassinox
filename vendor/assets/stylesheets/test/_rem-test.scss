@@ -1,0 +1,43 @@
+@if "#{rem(16)}" != "1rem" {
+  @debug "";
+  @warn "function rem(): FAIL!";
+  @debug "function rem(16)";
+  @debug "Result:   #{rem(16)}";
+  @debug "Intended: 1rem";
+  @debug "";
+}@else {
+  @debug "function rem(16): PASS";
+}
+
+@if "#{rem(16, 24)}" != "0.66667rem" {
+  @debug "";
+  @warn "function rem(): FAIL!";
+  @debug "function rem(16, 24)";
+  @debug "Result:   #{rem(16, 24)}";
+  @debug "Intended: 0.66667rem";
+  @debug "";
+}@else {
+  @debug "function rem(16, 24): PASS";
+}
+
+@if "#{rem(8 16 24 32)}" != "0.5rem 1rem 1.5rem 2rem" {
+  @debug "";
+  @warn "function rem(): FAIL!";
+  @debug "function rem(8 16 24 32)";
+  @debug "Result:   #{rem(8 16 24 32)}";
+  @debug "Intended: 0.5rem 1rem 1.5rem 2rem";
+  @debug "";
+}@else {
+  @debug "function rem(8 16 24 32): PASS";
+}
+
+@if "#{rem(8 16 24 32, 32)}" != "0.25rem 0.5rem 0.75rem 1rem" {
+  @debug "";
+  @warn "function rem(): FAIL!";
+  @debug "function rem(8 16 24 32, 32)";
+  @debug "Result:   #{rem(8 16 24 32, 32)}";
+  @debug "Intended: 0.5rem 1rem 1.5rem 2rem";
+  @debug "";
+}@else {
+  @debug "function rem(8 16 24 32, 32): PASS";
+}

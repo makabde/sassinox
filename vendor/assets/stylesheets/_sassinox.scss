@@ -9,7 +9,7 @@
 // Settings
 @import
   'settings/sassinox-settings',
-  'settings/sassinox-helpers';
+  'settings/sassinox-private-helpers';
 
 // Functions
 @import
@@ -28,3 +28,8 @@
   'mixins/hide-text',
   'mixins/register-font',
   'mixins/reset-box-model';
+
+// Test
+@import
+  'test/modular-scale-test',
+  'test/rem-test';

@@ -3,25 +3,24 @@ $base-rem: 16px !default;
 
 // Modular scale variables
 // See http://modularscale.com/
-$phi              : 1.618034          ;
-$golden           : $phi              ;
-
-$double-octave    : 4                 ;
-$major-twelfth    : 3                 ;
-$major-eleventh   : 2.666666667       ;
-$major-tenth      : 2.5               ;
-$octave           : 2                 ;
-$major-seventh    : 1.875             ;
-$minor-seventh    : 1.777777778       ;
-$major-sixth      : 1.666666667       ;
-$minor-sixth      : 1.6               ;
-$fifth            : 1.5               ;
-$augmented-fourth : 1.41421           ;
-$fourth           : 1.333333333       ;
-$major-third      : 1.25              ;
-$minor-third      : 1.2               ;
-$major-second     : 1.125             ;
-$minor-second     : 1.066666667       ;
+$phi              : 1.61803399;
+$golden           : $phi;
+$minor-second:     1.066666667;
+$major-second:     1.125;
+$minor-third:      1.2;
+$major-third:      1.25;
+$perfect-fourth:   1.333333333;
+$augmented-fourth: 1.41421;
+$perfect-fifth:    1.5;
+$minor-sixth:      1.6;
+$major-sixth:      1.666666667;
+$minor-seventh:    1.777777778;
+$major-seventh:    1.875;
+$octave:           2;
+$major-tenth:      2.5;
+$major-eleventh:   2.666666667;
+$major-twelfth:    3;
+$double-octave:    4;
 
 // Default ratio used when calculating using the golden-ratio function
 $base-ratio: $golden !default;

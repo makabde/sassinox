@@ -1,0 +1,47 @@
+// UNIT
+// Strip unit from value and return it without its unit of measure.
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+// Get unit return the unit attached to a given value.
+@function get-unit($value) {
+  @return $value * 0 + 1;
+}
+
+
+// REM CALC
+// Calculate a given value to rem based on the passed
+// base value.
+@function rem-calc ($value, $base-value: $base-rem) {
+  $result: strip-unit($value) / strip-unit($base-value) * 1rem;
+  // if result equals 0rem strip unit and return 0.
+  @if ($result == 0rem) { $result: 0 }
+
+  @return $result;
+}
+
+
+// MODULAR SCALE CALC
+// Calculate modular scale value for one given value
+// and one given ratio only.
+@function modular-scale-calc($value, $increment, $ratio) {
+  // Remove value to avoid any messiness with units.
+  $unit: get-unit($value);
+  $value: strip-unit($value);
+
+  $result: $ratio;
+
+  @if $increment > 0 {
+    @for $i from 1 to $increment {
+      $result: $result * $ratio;
+    }
+  }
+  @elseif $increment < 0 {
+    @for $i from (-1 + 1) to (abs($increment) + 1) {
+      $result: $result / $ratio;
+    }
+  }
+
+  // Calculate modular scale value and adds the original unit back.
+  @return ($result * $value) * $unit;
+}
