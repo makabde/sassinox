@@ -1,0 +1,4 @@
+// Checks if an element belongs to a list
+@function belongs-to ($item, $list) {
+  @return index($list, $item) != false;
+}
